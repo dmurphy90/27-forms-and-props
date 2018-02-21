@@ -1,0 +1,31 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #666666;
+  color: #FFFDFE;
+  font-family: 'Optima', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.input {
+  margin-right: 15px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #2A93E8;
+  border: none;
+  width: 80px;
+  color: #FFFDFE;
+  font-family: 'Optima', sans-serif;
+  font-size: 15px;
+}

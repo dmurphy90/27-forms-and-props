@@ -39,14 +39,14 @@ class SearchForm extends React.Component {
 
         <h1>Reddit Search</h1>
         <div className='container'>
-          <input className={this.props.err ? 'error' : 'input'}
+          <input className={this.props.error ? 'error' : 'input'}
             type="text" 
             name="topic" 
             value={this.state.topic} 
             onChange={this.handleChange} 
             placeholder="Search Topic"/>
         
-          <input className={this.props.err ? 'error' : 'input'}
+          <input className={this.props.error ? 'error' : 'input'}
             type="number"
             min="1"
             max="100"
