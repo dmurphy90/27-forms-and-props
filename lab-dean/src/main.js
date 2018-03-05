@@ -46,7 +46,7 @@ class SearchForm extends React.Component {
             onChange={this.handleChange} 
             placeholder="Search Topic"/>
         
-          <input className={this.props.error ? 'error' : 'input'}
+          <input className={this.props.error ? 'error' : 'number'}
             type="number"
             min="1"
             max="100"
@@ -73,11 +73,11 @@ class Results extends React.Component {
       <div className="results">
         {this.props.topic ?
           <section className="topic_data">
-            <h2>Results for {this.props.topic.data.children[0].data.subreddit}</h2>
+            <h2>Results</h2>
             <ul>
-              {this.props.topic.data.children.map((a, b) => {
+              {this.props.topic.map((a, b) => {
                 return <li key={b}>
-                  <a href={a.data.url}><h2>{a.data.title}</h2></a>
+                  <a href={a.data.url}><h3>{a.data.title}</h3></a>
                   <p> Upvotes: {a.data.ups}</p>
                 </li>;
               })
@@ -113,7 +113,7 @@ class App extends React.Component {
 
   updateState(topic, num) {
     this.searchApi(topic, num)
-      .then(res => this.setState({topic: res.body, searchError: null}))
+      .then(res => this.setState({topic: res.body.data.children, searchError: null}))
       .catch(err => this.setState({topic: null, searchError: err}));
   }
 
@@ -125,7 +125,7 @@ class App extends React.Component {
     return (
       <div className="application">
         <SearchForm update_state={this.updateState} error={this.state.searchError}/>
-        <Results searchFormBoard={this.state.searchFormBoard} error={this.state.searchError}/>
+        <Results searchFormBoard={this.state.searchFormBoard} topic={this.state.topic} error={this.state.searchError}/>
       </div>
     );
   }
