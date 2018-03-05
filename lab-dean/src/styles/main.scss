@@ -1,0 +1,73 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #666666;
+  color: #FFFDFE;
+  font-family: 'Optima', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.input {
+  margin-right: 15px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #2A93E8;
+  border: none;
+  width: 80px;
+  color: #FFFDFE;
+  font-family: 'Optima', sans-serif;
+  font-size: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3 {
+  text-align: center;
+}
+
+section.topic_data {
+  outline: 3px solid #FFFDFE;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  text-decoration: underline;
+  text-align: center;
+}
+
+a {
+  color: #2A93E8;
+  text-decoration: none;
+  text-align: center;
+}
+
+input.input {
+  width: 150px;
+  height: 20px;
+  border: none;
+}
+
+input.number {
+  height: 20px;
+  border: none;
+}
